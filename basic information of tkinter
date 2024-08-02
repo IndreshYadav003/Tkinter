@@ -1,0 +1,60 @@
+# firs we create basic gui
+from  tkinter  import*
+root=Tk()
+#  1  display properties of gui
+root.maxsize(width=350,height=333)#maxmum size of our gui
+root.minsize(width=34,height=123)#minimum size of our gui
+root.geometry('340x122')#geometry of our gui pxl  change possion +50-50 write in
+root.resizable(False,False)#close resizeable of our gui
+#  2  attributes of tkinter
+root.title("this is my first gui")#give title of our gui
+root.iconbitmap()#give image of our gui icon png file address
+root.attributes('-alpha',.9)# 0-1 transfrant of our gui
+root.config(bg='green')# to chang background color of our  gui   root['bg]='green
+
+#   3  layout managements  1 pack()=no parameter 2 grid()=1 parameter  3 place() row ans colon parameters fill,expands,side,ipadx,ipady,padx,pady
+
+# to write any thing in gui we use Lable()
+
+
+lab=Label(root,text="Todat i write first code of thkinter ",bg='red')
+
+
+# we not writ lm than nothing seen
+ #lab.pack() #randon writ in gui any where padx pady     ipadx  ipady  fill='x
+
+
+
+lab.grid(row=1,column=3)#column,row,rowspan,columnspan,sticky.padx.pady,ipadx,ipady
+lab1=Label(root,text='godd')
+lab1.grid(row=2,column=2)
+
+# place() x,y,relx,rely,width,height,relwidth,relheighth,anchor
+
+#  lab.place(x=11,y=4)
+# lab1.place(x=21,y=9)
+
+ #  4 tkinter variables
+'''
+ tkinter variable t 4 types
+ 1. booleaVar() ==Ture,False
+ 2.StringVar()==any
+ 3.IntVar()== 133 aony
+ 4.DoubleVar() ==3.099
+ 
+ syntax  var=Tkinter_varialbe(root,value=any_value)
+ 
+'''
+'''
+Setting value of tkinter variavle
+1 set()
+2 setvar() if we use name
+3 get()
+4 getvar()
+
+'''
+var =StringVar(root,value="22ds")
+print(var.get())
+var.set("python")
+print(var.get())
+root.mainloop()
